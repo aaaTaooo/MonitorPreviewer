@@ -39,3 +39,6 @@ Helping users to select ideal monitor size for their table.
 - Zoom out canvas
 - Reset canvas position
 - About dialog (Author and quick usage guide)
+
+## Video Presentation Link
+https://youtu.be/D7P6sETRDWo
