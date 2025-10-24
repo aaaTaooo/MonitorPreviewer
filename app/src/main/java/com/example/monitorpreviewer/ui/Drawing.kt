@@ -140,7 +140,7 @@ fun DrawScope.drawIndicator(x: Float, y: Float) {
         )
     }
 
-    // Add a 10cm comment to indicator
+    // Add a 100cm comment to indicator
     drawContext.canvas.nativeCanvas.apply {
         val paint = android.graphics.Paint().apply {
             color = android.graphics.Color.BLACK

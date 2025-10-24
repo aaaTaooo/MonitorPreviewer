@@ -12,7 +12,7 @@ class MonitorPreviewerViewModel : ViewModel() {
     // Public immutable state for UI observation
     val uiState: StateFlow<MonitorPreviewerUiState> = _uiState.asStateFlow()
 
-    // ============== Surface Operations ==============
+    // ============== Desk Surface Operations ==============
     // Update the size of DeskSurface
     fun updateDeskSurface(width: Float) {
         _uiState.update { currentState ->
