@@ -23,6 +23,7 @@ fun MonitorPreviewerScreen(
 
     var showMonitorSizeDialog by remember { mutableStateOf(false) }
     var showDeskSizeDialog by remember { mutableStateOf(false) }
+    var showAboutDialog by remember { mutableStateOf(false) }
 
     // Create a default monitor when the screen is first opened
     LaunchedEffect(Unit) {
@@ -84,6 +85,11 @@ fun MonitorPreviewerScreen(
                 viewModel.resetView()
             },
             modifier = Modifier.align(Alignment.TopStart),
+
+            // About dialog
+            onAbout = {
+                showAboutDialog = true
+            }
         )
 
         // Monitor size dialog
@@ -110,6 +116,15 @@ fun MonitorPreviewerScreen(
                 },
                 onDismiss = {
                     showDeskSizeDialog = false
+                }
+            )
+        }
+
+        // About dialog
+        if (showAboutDialog) {
+            AboutDialog(
+                onDismiss = {
+                    showAboutDialog = false
                 }
             )
         }

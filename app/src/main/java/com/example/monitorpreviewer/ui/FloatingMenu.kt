@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.SmallFloatingActionButton
@@ -39,6 +40,7 @@ fun FloatingMenu(
     onZoomIn: () -> Unit,
     onZoomOut: () -> Unit,
     onResetView: () -> Unit,
+    onAbout: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -64,7 +66,7 @@ fun FloatingMenu(
         ) {
             Column(
                 horizontalAlignment = Alignment.End,
-                verticalArrangement = Arrangement.spacedBy(12.dp, Alignment.Top)
+                verticalArrangement = Arrangement.spacedBy(2.dp, Alignment.Top)
             ) {
                 // If there is at least one selected monitor
                 if (uiState.monitors.any { it.isSelected }) {
@@ -125,6 +127,13 @@ fun FloatingMenu(
                         onResetView()
                     }) {
                         Icon(Icons.Default.Refresh, contentDescription = "Reset View")
+                    }
+
+                    // About dialog
+                    SmallFloatingActionButton(onClick = {
+                        onAbout()
+                    }) {
+                        Icon(Icons.Default.Settings, contentDescription = "Reset View")
                     }
                 }
             }
