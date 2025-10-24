@@ -120,7 +120,7 @@ fun DrawScope.drawMonitor(
 
 // Draw scale indicator
 fun DrawScope.drawIndicator(x: Float, y: Float) {
-    val indicatorLength = 120f
+    val indicatorLength = 1000f
 
     drawLine(
         color = Color.Black,
@@ -146,7 +146,7 @@ fun DrawScope.drawIndicator(x: Float, y: Float) {
             color = android.graphics.Color.BLACK
             textSize = 30f
         }
-        drawText("10cm", x + indicatorLength + 10, y + 5, paint)
+        drawText("100cm", x + indicatorLength + 10, y + 5, paint)
     }
 }
 
