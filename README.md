@@ -1,5 +1,6 @@
 # Monitor Previewer
 
+-Author: Hongtao Liu 24010936
 This is an Android application for previewing and arranging multiple monitors on a virtual desk surface. 
 Providing a straightforward view of different combination of monitors.
 Helping users to select ideal monitor size for their table.
