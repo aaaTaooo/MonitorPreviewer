@@ -16,10 +16,10 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text("Author: Hongtao Liu 24010936")
                 Text("Created for 159.336 Assignment 3")
                 Text("\nHow to use:")
-                Text("• Tap to select monitor")
-                Text("• Drag to move monitor")
-                Text("• Two fingers to zoom or move canvas")
-                Text("• Use menu for more options")
+                Text("· Tap to select monitor")
+                Text("· Drag to move monitor")
+                Text("· Two fingers to zoom or move canvas")
+                Text("· Use menu for more options")
             }
         },
         confirmButton = {
